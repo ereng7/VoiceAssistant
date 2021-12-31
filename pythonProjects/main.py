@@ -1,4 +1,5 @@
 import os
+import pathlib
 import time
 import playsound
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -282,25 +283,30 @@ class Ui_Form(object):
                     url = "https://www.google.com/"
                     browser.get(url)
 
-                elif(said == "Dersler klasörünü aç"):
-                    filepath = "C:\\Users\\erengulbahar\\Desktop\\Dersler"
-                    os.startfile(filepath)
-
-                elif(said == "Javayı aç"):
-                    filepath = "D:\\IntelliJ IDEA Community Edition 2021.3\\bin\\idea64.exe"
-                    os.startfile(filepath)
-
-                elif(said == "Android studio aç"):
-                    filepath = "D:\\AndroidStudio\\bin\\studio64.exe"
-                    os.startfile(filepath)
+                elif(said == "Java aç"):
+                    browser = webdriver.Chrome()
+                    url = "https://www.tutorialspoint.com/compile_java_online.php"
+                    browser.get(url)
 
                 elif(said == "Whatsapp aç"):
-                    filepath = "C:\\Users\\erengulbahar\\AppData\\Local\\WhatsApp\\WhatsApp.exe"
-                    os.startfile(filepath)
+                    browser = webdriver.Chrome()
+                    url = "https://www.whatsapp.com/?lang=tr"
+                    browser.get(url)
 
                 elif(said == "Skype aç"):
-                    filepath = "C:\\Program Files (x86)\\Microsoft\\Skype for Desktop\\Skype.exe"
-                    os.startfile(filepath)
+                    browser = webdriver.Chrome()
+                    url = "https://www.skype.com/tr/"
+                    browser.get(url)
+
+                elif(said == "E-posta aç"):
+                    browser = webdriver.Chrome()
+                    url = "https://www.google.com/intl/tr/gmail/about/"
+                    browser.get(url)
+
+                elif(said == "Python aç"):
+                    browser = webdriver.Chrome()
+                    url = "https://www.programiz.com/python-programming/online-compiler/"
+                    browser.get(url)
 
             except Exception:
                 #If we dont say clearly, assistant will speak this text
